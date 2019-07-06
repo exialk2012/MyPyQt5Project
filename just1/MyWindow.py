@@ -16,9 +16,10 @@ class MyWindow(QWidget):
         self.setWindowTitle(self.titlename)
 
         #设置按钮相关信息
-        qbtn = QPushButton('退出',self)
-        qbtn.clicked.connect(QCoreApplication.instance().quit)
-        qbtn.setGeometry(640/2-70/2,480/2-30/2,70,30)
+        self.qbtn = QPushButton('退出',self)
+        self.qbtn.setToolTip('<b>点击此按钮用来关闭</b>')
+        self.qbtn.clicked.connect(QCoreApplication.instance().quit)
+        self.qbtn.setGeometry(640/2-70/2,480/2-30/2,70,30)
 
         #显示窗口
         self.show()
